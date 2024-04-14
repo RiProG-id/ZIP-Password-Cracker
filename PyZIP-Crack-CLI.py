@@ -53,10 +53,14 @@ if __name__ == '__main__':
 
     all_chars = lowercase_letters + uppercase_letters + digits + special_chars
     
-    zip_file_path = input("Enter the path to the ZIP file: ")
+    file_path = input("Enter the path to the file: ")
 
-    if not os.path.exists(zip_file_path):
-        print("The specified ZIP file does not exist.")
+    if not os.path.exists(file_path):
+        print("The specified file does not exist.")
+        sys.exit()
+
+    if not file_path.endswith(".zip"):
+        print("The specified file is not a ZIP file.")
         sys.exit()
 
     print("Choose a method:")
@@ -94,7 +98,7 @@ if __name__ == '__main__':
     max_length = int(input("Enter the maximum length of the password to try: "))
 
     try:
-        zip_file = zipfile.ZipFile(zip_file_path)
+        zip_file = zipfile.ZipFile(file_path)
     except Exception as e:
         print('Failed to open ZIP file: ' + str(e))
         sys.exit()
