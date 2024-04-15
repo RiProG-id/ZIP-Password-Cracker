@@ -2,5 +2,6 @@
 A simple Python script to crack ZIP Passwords
 
 
+```shell
+python3 crackzip.py
 ```
-python3 PyCrack-ZIP.py
