@@ -77,17 +77,17 @@ if __name__ == '__main__':
     charsets = []
 
     if method_choice == "1":
-        charsets.append(lowercase_letters)
+        charsets.append(lowercase_letters + ' ')
     elif method_choice == "2":
-        charsets.append(uppercase_letters)
+        charsets.append(uppercase_letters + ' ')
     elif method_choice == "3":
-        charsets.append(lowercase_letters + uppercase_letters)
+        charsets.append(lowercase_letters + uppercase_letters + ' ')
     elif method_choice == "4":
-        charsets.append(digits)
+        charsets.append(digits + ' ')
     elif method_choice == "5":
-        charsets.append(special_chars)
+        charsets.append(special_chars + ' ')
     elif method_choice == "6":
-        charsets.append(lowercase_letters + uppercase_letters + digits)
+        charsets.append(lowercase_letters + uppercase_letters + digits + ' ')
     elif method_choice == "7":
         charsets = [all_chars]
     else:
